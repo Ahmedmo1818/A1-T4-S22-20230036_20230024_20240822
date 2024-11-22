@@ -8,6 +8,7 @@ bool Instructions::readfile(const std::string& filename) {
         return false;
     }
 
+
     std::string line;
     while (getline(file, line)) {
         if (!line.empty()) {

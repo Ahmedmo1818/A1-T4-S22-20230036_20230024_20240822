@@ -8,7 +8,6 @@ float Machine::handleFloat(const std::string& hexVal) {
     int sign = (val & 0x80) >> 7;
     int exponent = (val & 0x70) >> 4;
     int mantissa = val & 0x0F;
-
     float mantissaVal = 1.0 + mantissa / 16.0;
     float decimalValue = std::pow(2, exponent - 4) * mantissaVal;
     return sign ? -decimalValue : decimalValue;
